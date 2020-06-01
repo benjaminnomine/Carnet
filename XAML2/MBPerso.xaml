@@ -1,0 +1,64 @@
+﻿<Window x:Class="XAML2.MBPerso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAML2"
+        Height="150" Width="250" ResizeMode="NoResize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        AllowsTransparency="True" Topmost="True"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" UseLayoutRounding="True" WindowStyle="None" Background="Transparent" ShowInTaskbar="False">
+    <!-- Enlever les ressources pour ne se servir que des ressources de l'application au complet ?-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="LightBlue" SecondaryColor="Cyan"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border CornerRadius="6" BorderThickness="0.3"  Background="{DynamicResource MaterialDesignPaper}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300*"/>
+                <ColumnDefinition Width="300*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="MessageAffiche" HorizontalAlignment="Center" IsReadOnly="True" Grid.Row="0" Margin="5" materialDesign:HintAssist.Hint="" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="0,0,0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnOk" Click="btnOk_Click" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="5 10 5 0" Width="75" Content="Ok" ToolTip="Ok" IsDefault="True"/>
+                        <Button x:Name="btnAnnuler" Click="btnAnnuler_Click" Grid.Column="2" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="5 10 5 0" Width="75" Content="Annuler" ToolTip="Annuler" IsCancel="True"/>
+                        <Button x:Name="btnOui" Click="btnOui_Click" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="5 10 5 0" Width="75" Content="Oui" ToolTip="Oui" IsDefault="True"/>
+                        <Button x:Name="btnNon" Click="btnNon_Click" Grid.Column="2" Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="5 10 5 0" Width="75" Content="Non" ToolTip="Non" IsCancel="True"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

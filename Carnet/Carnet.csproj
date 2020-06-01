@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E39E4D8-74BD-4516-BEAE-3CCD81764AED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Carnet</RootNamespace>
+    <AssemblyName>Carnet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Carnet.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Paomedia-Small-N-Flat-Address-book-alt.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodePostalException.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="ContactDejaPresentException.cs" />
+    <Compile Include="EmailInvalideException.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeSortie.cs" />
+    <Compile Include="ListeContact.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TelephoneInvalideException.cs" />
+    <Compile Include="Utilitaire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\ListeContact.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Paomedia-Small-N-Flat-Address-book-alt.ico" />
+    <Content Include="png\Abkhazie.png" />
+    <Content Include="png\afghanistan.png" />
+    <Content Include="png\Afrique du Sud.png" />
+    <Content Include="png\Albanie.png" />
+    <Content Include="png\Algérie.png" />
+    <Content Include="png\Allemagne.png" />
+    <Content Include="png\aller.png" />
+    <Content Include="png\Andorre.png" />
+    <Content Include="png\Angleterre.png" />
+    <Content Include="png\angola.png" />
+    <Content Include="png\anguilla.png" />
+    <Content Include="png\Antigua-et-Barbuda.png" />
+    <Content Include="png\Arabie Saoudite.png" />
+    <Content Include="png\Argentine.png" />
+    <Content Include="png\Arménie.png" />
+    <Content Include="png\aruba.png" />
+    <Content Include="png\Australie.png" />
+    <Content Include="png\Azerbaïdjan.png" />
+    <Content Include="png\bahamas.png" />
+    <Content Include="png\Bahreïn.png" />
+    <Content Include="png\bangladesh.png" />
+    <Content Include="png\Barbade.png" />
+    <Content Include="png\Belgique.png" />
+    <Content Include="png\belize.png" />
+    <Content Include="png\Bermudes.png" />
+    <Content Include="png\Bhoutan.png" />
+    <Content Include="png\Biélorussie.png" />
+    <Content Include="png\Bolivie.png" />
+    <Content Include="png\bonaire.png" />
+    <Content Include="png\Bosnie-Herzégovine.png" />
+    <Content Include="png\brunei.png" />
+    <Content Include="png\Brésil.png" />
+    <Content Include="png\Bulgarie.png" />
+    <Content Include="png\Burkina Faso.png" />
+    <Content Include="png\burundi.png" />
+    <Content Include="png\Bénin.png" />
+    <Content Include="png\Cambodge.png" />
+    <Content Include="png\Cameroun.png" />
+    <Content Include="png\canada.png" />
+    <Content Include="png\Cap-Vert.png" />
+    <Content Include="png\ceuta.png" />
+    <Content Include="png\Chili.png" />
+    <Content Include="png\Chine.png" />
+    <Content Include="png\Chypre du Nord.png" />
+    <Content Include="png\Chypre.png" />
+    <Content Include="png\Cité du Vatican.png" />
+    <Content Include="png\Colombie britannique.png" />
+    <Content Include="png\Colombie.png" />
+    <Content Include="png\comores.png" />
+    <Content Include="png\Corée du Nord.png" />
+    <Content Include="png\Corée du Sud.png" />
+    <Content Include="png\costa-rica.png" />
+    <Content Include="png\Croatie.png" />
+    <Content Include="png\cuba.png" />
+    <Content Include="png\Curaçao.png" />
+    <Content Include="png\Côte d%27Ivoire.png" />
+    <Content Include="png\Danemark.png" />
+    <Content Include="png\dinde.png" />
+    <Content Include="png\djibouti.png" />
+    <Content Include="png\Dominique.png" />
+    <Content Include="png\Espagne.png" />
+    <Content Include="png\Estonie.png" />
+    <Content Include="png\Fidji.png" />
+    <Content Include="png\Finlande.png" />
+    <Content Include="png\france.png" />
+    <Content Include="png\gabon.png" />
+    <Content Include="png\Gambie.png" />
+    <Content Include="png\ghana.png" />
+    <Content Include="png\gibraltar.png" />
+    <Content Include="png\Grenade.png" />
+    <Content Include="png\Groenland.png" />
+    <Content Include="png\Grèce.png" />
+    <Content Include="png\guam.png" />
+    <Content Include="png\guatemala.png" />
+    <Content Include="png\Guernesey.png" />
+    <Content Include="png\Guinée Équatoriale.png" />
+    <Content Include="png\Guinée-Bissau.png" />
+    <Content Include="png\Guinée.png" />
+    <Content Include="png\Géorgie.png" />
+    <Content Include="png\hawaii.png" />
+    <Content Include="png\Haïti.png" />
+    <Content Include="png\honduras.png" />
+    <Content Include="png\Hong Kong.png" />
+    <Content Include="png\Hongrie.png" />
+    <Content Include="png\Iles Aland.png" />
+    <Content Include="png\Image1.png" />
+    <Content Include="png\Inde.png" />
+    <Content Include="png\Indonésie.png" />
+    <Content Include="png\Irak.png" />
+    <Content Include="png\Irlande.png" />
+    <Content Include="png\Islande.png" />
+    <Content Include="png\Israël.png" />
+    <Content Include="png\Italie.png" />
+    <Content Include="png\Jamaïque.png" />
+    <Content Include="png\Japon.png" />
+    <Content Include="png\jersey.png" />
+    <Content Include="png\jordan.png" />
+    <Content Include="png\kazakhstan.png" />
+    <Content Include="png\kenya.png" />
+    <Content Include="png\Kirghizistan.png" />
+    <Content Include="png\kiribati.png" />
+    <Content Include="png\kosovo.png" />
+    <Content Include="png\Koweit.png" />
+    <Content Include="png\L%27Autriche.png" />
+    <Content Include="png\l%27ile de Norfolk.png" />
+    <Content Include="png\l%27Iran.png" />
+    <Content Include="png\L%27île de Noël.png" />
+    <Content Include="png\la Corse.png" />
+    <Content Include="png\laos.png" />
+    <Content Include="png\le Botswana.png" />
+    <Content Include="png\le Portugal.png" />
+    <Content Include="png\Le Salvador.png" />
+    <Content Include="png\Les iles vierges.png" />
+    <Content Include="png\Les Nations Unies.png" />
+    <Content Include="png\les Seychelles.png" />
+    <Content Include="png\les îles Baléares.png" />
+    <Content Include="png\les îles Canaries.png" />
+    <Content Include="png\les îles Cook.png" />
+    <Content Include="png\les îles Falkland.png" />
+    <Content Include="png\les îles Galapagos.png" />
+    <Content Include="png\Les îles Salomon.png" />
+    <Content Include="png\lesotho.png" />
+    <Content Include="png\Lettonie.png" />
+    <Content Include="png\Liban.png" />
+    <Content Include="png\Libye.png" />
+    <Content Include="png\Libéria.png" />
+    <Content Include="png\liechtenstein.png" />
+    <Content Include="png\Lituanie.png" />
+    <Content Include="png\luxembourg.png" />
+    <Content Include="png\macao.png" />
+    <Content Include="png\madagascar.png" />
+    <Content Include="png\Madère.png" />
+    <Content Include="png\malasya.png" />
+    <Content Include="png\malawi.png" />
+    <Content Include="png\maldives.png" />
+    <Content Include="png\mali.png" />
+    <Content Include="png\Malte.png" />
+    <Content Include="png\Maroc.png" />
+    <Content Include="png\marshall-island.png" />
+    <Content Include="png\martinique.png" />
+    <Content Include="png\Maurice.png" />
+    <Content Include="png\Mauritanie.png" />
+    <Content Include="png\melilla.png" />
+    <Content Include="png\Mexique.png" />
+    <Content Include="png\Micronésie.png" />
+    <Content Include="png\Moldavie.png" />
+    <Content Include="png\monaco.png" />
+    <Content Include="png\Mongolie.png" />
+    <Content Include="png\montserrat.png" />
+    <Content Include="png\Monténégro.png" />
+    <Content Include="png\mozambique.png" />
+    <Content Include="png\myanmar.png" />
+    <Content Include="png\Namibie.png" />
+    <Content Include="png\nauru.png" />
+    <Content Include="png\nicaragua.png" />
+    <Content Include="png\niger.png" />
+    <Content Include="png\nigeria.png" />
+    <Content Include="png\niue.png" />
+    <Content Include="png\Norvège.png" />
+    <Content Include="png\Nouvelle-Zélande.png" />
+    <Content Include="png\Népal.png" />
+    <Content Include="png\oman.png" />
+    <Content Include="png\Ossétie.png" />
+    <Content Include="png\OTAN.png" />
+    <Content Include="png\Ouganda.png" />
+    <Content Include="png\pakistan.png" />
+    <Content Include="png\palau.png" />
+    <Content Include="png\palestine.png" />
+    <Content Include="png\panama.png" />
+    <Content Include="png\Papouasie Nouvelle-Guinée.png" />
+    <Content Include="png\paraguay.png" />
+    <Content Include="png\Pays basque.png" />
+    <Content Include="png\Pays de Galles.png" />
+    <Content Include="png\Pays-Bas.png" />
+    <Content Include="png\philippines.png" />
+    <Content Include="png\Pologne.png" />
+    <Content Include="png\Polynésie française.png" />
+    <Content Include="png\puerto-rico.png" />
+    <Content Include="png\Pérou.png" />
+    <Content Include="png\Rapa Nui.png" />
+    <Content Include="png\Roumanie.png" />
+    <Content Include="png\Royaume-Uni.png" />
+    <Content Include="png\Russie.png" />
+    <Content Include="png\rwanda.png" />
+    <Content Include="png\République centrafricaine.png" />
+    <Content Include="png\République de Macédoine.png" />
+    <Content Include="png\République Dominicaine.png" />
+    <Content Include="png\République du Congo.png" />
+    <Content Include="png\République Démocratique du Congo.png" />
+    <Content Include="png\République Sahraouie-arabe-démocratique.png" />
+    <Content Include="png\République Tchèque.png" />
+    <Content Include="png\Saint-Christophe-et-Niévès.png" />
+    <Content Include="png\Saint-Eustache.png" />
+    <Content Include="png\Saint-Marin.png" />
+    <Content Include="png\Saint-Vincent-et-les-Grenadines.png" />
+    <Content Include="png\Sainte-Lucie.png" />
+    <Content Include="png\Samoa américaines.png" />
+    <Content Include="png\samoa.png" />
+    <Content Include="png\Sao Tomé-et-prince.png" />
+    <Content Include="png\Sardaigne.png" />
+    <Content Include="png\Serbie.png" />
+    <Content Include="png\sicile.png" />
+    <Content Include="png\Sierra Leone.png" />
+    <Content Include="png\Singapour.png" />
+    <Content Include="png\sint-maarten.png" />
+    <Content Include="png\Slovaquie.png" />
+    <Content Include="png\Slovénie.png" />
+    <Content Include="png\Somalie.png" />
+    <Content Include="png\somaliland.png" />
+    <Content Include="png\Soudan du Sud.png" />
+    <Content Include="png\Soudan.png" />
+    <Content Include="png\Sri Lanka.png" />
+    <Content Include="png\st-barts.png" />
+    <Content Include="png\Suisse.png" />
+    <Content Include="png\suriname.png" />
+    <Content Include="png\Suède.png" />
+    <Content Include="png\swaziland.png" />
+    <Content Include="png\Syrie.png" />
+    <Content Include="png\Sénégal.png" />
+    <Content Include="png\Tadjikistan.png" />
+    <Content Include="png\Tanzanie.png" />
+    <Content Include="png\Taïwan.png" />
+    <Content Include="png\tchad.png" />
+    <Content Include="png\territoire-océan-britannique-indien.png" />
+    <Content Include="png\Thaïlande.png" />
+    <Content Include="png\tibet.png" />
+    <Content Include="png\Timor oriental.png" />
+    <Content Include="png\tokelau.png" />
+    <Content Include="png\tonga.png" />
+    <Content Include="png\transnistrie.png" />
+    <Content Include="png\Trinité-et-Tobago.png" />
+    <Content Include="png\Tunisie.png" />
+    <Content Include="png\turkménistan.png" />
+    <Content Include="png\tuvalu-1.png" />
+    <Content Include="png\tuvalu.png" />
+    <Content Include="png\ukraine.png" />
+    <Content Include="png\Union européenne.png" />
+    <Content Include="png\uruguay.png" />
+    <Content Include="png\uzbekistn.png" />
+    <Content Include="png\vanuatu.png" />
+    <Content Include="png\venezuela.png" />
+    <Content Include="png\vietnam.png" />
+    <Content Include="png\Yémen.png" />
+    <Content Include="png\Zambie.png" />
+    <Content Include="png\zimbabwe.png" />
+    <Content Include="png\Écosse.png" />
+    <Content Include="png\Égypte.png" />
+    <Content Include="png\Émirats arabes unis.png" />
+    <Content Include="png\équateur.png" />
+    <Content Include="png\Érythrée.png" />
+    <Content Include="png\Éthiopie.png" />
+    <Content Include="png\île de Man.png" />
+    <Content Include="png\île de Saba.png" />
+    <Content Include="png\île-cocos.png" />
+    <Content Include="png\Îles Caïmans.png" />
+    <Content Include="png\îles du nord-marianas.png" />
+    <Content Include="png\Îles Féroé.png" />
+    <Content Include="png\îles Pitcairn.png" />
+    <Content Include="png\Îles Turques et Caïques.png" />
+    <Content Include="png\Îles Vierges britanniques.png" />
+    <Content Include="png\îles-açores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,134 @@
+﻿<Window x:Class="XAML2.PageModif"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:XAML2"
+        Title="Modification Contact" Height="400" Width="400" ResizeMode="NoResize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" UseLayoutRounding="True" WindowStyle="None" Background="Transparent" ShowInTaskbar="False">
+    <!-- Enlever les ressources pour ne se servir que des ressources de l'application au complet ?-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="LightBlue" SecondaryColor="Cyan"/>
+            </ResourceDictionary.MergedDictionaries>
+            <x:Array x:Key="ComboBoxItems" Type="sys:String">
+                <sys:String>Alberta</sys:String>
+                <sys:String>Colombie Britannique</sys:String>
+                <sys:String>Colombie Britannique</sys:String>
+                <sys:String>Île-du-Prince-Édouard</sys:String>
+                <sys:String>Manitoba</sys:String>
+                <sys:String>Nouveau Brunswick</sys:String>
+                <sys:String>Nova Scotia</sys:String>
+                <sys:String>Nunavut</sys:String>
+                <sys:String>Ontario</sys:String>
+                <sys:String>Québec</sys:String>
+                <sys:String>Saskatchewan</sys:String>
+                <sys:String>Terre-Neuve-et-Labrador</sys:String>
+                <sys:String>Territoires du Nord-Ouest</sys:String>
+                <sys:String>Yukon</sys:String>
+            </x:Array>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border CornerRadius="6" BorderThickness="0.3" Background="{DynamicResource MaterialDesignPaper}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
+                x:Name="NomBox"
+                materialDesign:HintAssist.Hint="Nom"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Nom du contact">
+            </TextBox>
+            <TextBox Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="3"
+                x:Name="PrenomBox"
+                materialDesign:HintAssist.Hint="Prénom"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Prénom du contact"
+                >
+            </TextBox>
+            <TextBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"
+                x:Name="NoTelBox"
+                materialDesign:HintAssist.Hint="Téléphone"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Numéro de téléphone"
+                >
+            </TextBox>
+            <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8"
+                x:Name="EmailBox"
+                materialDesign:HintAssist.Hint="Courriel"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Courriel personnel"
+                >
+            </TextBox>
+            <TextBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="8"
+                x:Name="AdresseBox"
+                materialDesign:HintAssist.Hint="Adresse"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Adresse du contact"
+                >
+            </TextBox>
+            <TextBox Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="3"
+                x:Name="CPBox"
+                materialDesign:HintAssist.Hint="Code Postal"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="Code Postal"
+                >
+            </TextBox>
+            <TextBox Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="3"
+                x:Name="VilleBox"
+                materialDesign:HintAssist.Hint="Ville"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                 materialDesign:HintAssist.HintOpacity="0.4"
+                materialDesign:HintAssist.HelperText="">
+            </TextBox>
+            <ComboBox x:Name="ProvinceComboBox" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="8"
+                  materialDesign:HintAssist.Hint="Province" ItemsSource="{StaticResource ComboBoxItems}">
+            </ComboBox>
+            <Button x:Name="BtnSauver" Grid.Column="2" Grid.Row="12" Grid.ColumnSpan="3" Content="Sauver" Click="BtnSauver_Click" IsDefault="True" Style="{StaticResource MaterialDesignRaisedDarkButton}"/>
+            <Button x:Name="BtnAnnuler" Grid.Column="7" Grid.Row="12" Grid.ColumnSpan="3" Content="Annuler" Click="BtnAnnuler_Click" IsCancel="True" Style="{StaticResource MaterialDesignRaisedDarkButton}"/>
+        </Grid>
+    </Border>
+</Window>
