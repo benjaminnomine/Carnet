@@ -83,13 +83,13 @@ namespace Carnet
         // vider les textbox de contenu
         private void ViderChamps()
         {
-            boxNom.Text = "";
-            boxAdresse.Text = "";
-            boxPrenom.Text = "";
-            boxEmail.Text = "";
-            boxVille.Text = "";
-            boxCP.Text = "";
-            boxTel.Text = "";
+            boxNom.Clear();
+            boxAdresse.Clear();
+            boxPrenom.Clear();
+            boxEmail.Clear();
+            boxVille.Clear();
+            boxCP.Clear();
+            boxTel.Clear();
             boxProvince.Text = "";
             boxProvince.SelectedItem = null;
         }
